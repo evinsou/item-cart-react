@@ -1,0 +1,23 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+  username: item_cart_react
+  password: 4321devs
+
+development:
+  <<: *default
+  database: item_cart_react_development
+
+test:
+  <<: *default
+  database: item_cart_react_test
+
+production:
+  <<: *default
+  database: item_cart_react_production
+  username: item_cart_react
+  password: <%= ENV['ITEM_CART_REACT_DATABASE_PASSWORD'] %>
