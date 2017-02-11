@@ -20,7 +20,5 @@ var NewItem= React.createClass({
                 <button onClick={this.handleClick}>Submit</button>
             </div>
             )
-
-        )
     }
 });
